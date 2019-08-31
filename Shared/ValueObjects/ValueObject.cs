@@ -1,6 +1,8 @@
-﻿namespace Shared.ValueObjects
+﻿using Flunt.Notifications;
+
+namespace Shared.ValueObjects
 {
-    public abstract class ValueObject
+    public abstract class ValueObject : Notifiable
     {
     }
 }
