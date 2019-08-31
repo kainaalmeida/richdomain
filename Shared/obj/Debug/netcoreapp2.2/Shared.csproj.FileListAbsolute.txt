@@ -1,0 +1,8 @@
+C:\Users\Kaina\source\repos\PaymentContext\Shared\bin\Debug\netcoreapp2.2\Shared.deps.json
+C:\Users\Kaina\source\repos\PaymentContext\Shared\bin\Debug\netcoreapp2.2\Shared.dll
+C:\Users\Kaina\source\repos\PaymentContext\Shared\bin\Debug\netcoreapp2.2\Shared.pdb
+C:\Users\Kaina\source\repos\PaymentContext\Shared\obj\Debug\netcoreapp2.2\Shared.csproj.CoreCompileInputs.cache
+C:\Users\Kaina\source\repos\PaymentContext\Shared\obj\Debug\netcoreapp2.2\Shared.AssemblyInfoInputs.cache
+C:\Users\Kaina\source\repos\PaymentContext\Shared\obj\Debug\netcoreapp2.2\Shared.AssemblyInfo.cs
+C:\Users\Kaina\source\repos\PaymentContext\Shared\obj\Debug\netcoreapp2.2\Shared.dll
+C:\Users\Kaina\source\repos\PaymentContext\Shared\obj\Debug\netcoreapp2.2\Shared.pdb
