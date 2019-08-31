@@ -1,8 +1,4 @@
-﻿using Domain.Entities;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests.Entities
 {
@@ -13,9 +9,9 @@ namespace Tests.Entities
         [TestMethod]
         public void TestMethod1()
         {
-            var subscription = new Subscription(null);
-            var student = new Student ("Kainã", "Almeida","12345678912","kainafa@hotmail.com");
-            student.AddSubscription(subscription);
+            //var subscription = new Subscription(null);
+            //var student = new Student ("Kainã", "Almeida","12345678912","kainafa@hotmail.com");
+            //student.AddSubscription(subscription);
 
 
         }

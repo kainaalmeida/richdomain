@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.ValueObjects;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,9 +15,9 @@ namespace Domain.Entities
             decimal total,
             decimal totalPaid,
             string payer,
-            string document,
-            string address,
-            string email) :
+            Document document,
+            Address address,
+            Email email) :
             base
             (
              paidDate,
