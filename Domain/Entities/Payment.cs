@@ -1,10 +1,12 @@
 ﻿using Domain.ValueObjects;
+using Flunt.Validations;
+using Shared.Entities;
 using System;
 
 
 namespace Domain.Entities
 {
-    public abstract class Payment
+    public abstract class Payment : Entity
     {
         protected Payment
             (
@@ -26,6 +28,13 @@ namespace Domain.Entities
             Document = document;
             Address = address;
             Email = email;
+
+            AddNotifications(new Contract()
+                .Requires()
+                .IsGreaterThan(0, Total, nameof(Total), "O total não pode ser zero")
+                .IsGreaterOrEqualsThan(Total, totalPaid, nameof(TotalPaid), "O valor pago é menor que o valor do pagamento")
+           );
+
         }
 
         public string Number { get; private set; }

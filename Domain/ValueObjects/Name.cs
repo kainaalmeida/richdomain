@@ -1,4 +1,5 @@
-﻿using Shared.ValueObjects;
+﻿using Flunt.Validations;
+using Shared.ValueObjects;
 
 namespace Domain.ValueObjects
 {
@@ -9,8 +10,12 @@ namespace Domain.ValueObjects
             FirstName = firstName;
             LastName = lastName;
 
-            if (string.IsNullOrEmpty(FirstName))
-                AddNotification(nameof(FirstName), "Nome inválido");
+            AddNotifications(new Contract()
+                .Requires()
+                .HasMinLen(FirstName, 3, nameof(FirstName),"Nome deve conter pelo menos 3 caracteres")
+                .HasMinLen(LastName, 3, nameof(LastName), "Nome deve conter pelo menos 3 caracteres")
+                .HasMaxLen(FirstName, 40, nameof(FirstName),"Nome deve conter no máximo 40 caracteres")
+            );
 
         }
 

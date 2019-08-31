@@ -1,4 +1,5 @@
 ﻿using Domain.ValueObjects;
+using Flunt.Validations;
 using Shared.Entities;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,10 +29,17 @@ namespace Domain.Entities
 
         public void AddSubscription(Subscription subscription)
         {
-            foreach (var sub in Subscriptions)
-                sub.Deactivate();
+            var hasSubscriptionActive = false;
+            foreach (var sub in _subscriptions)
+            {
+                if (sub.Active)
+                    hasSubscriptionActive = true;
+            }
 
-            _subscriptions.Add(subscription);
+            AddNotifications(new Contract()
+                .Requires()
+                .IsFalse(hasSubscriptionActive, "Subscriptions","Você já tem uma assinatura ativa")
+            );
 
         }
 
